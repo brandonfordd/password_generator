@@ -1,0 +1,263 @@
+:root {
+  --primary-color: #302AE6;
+  --secondary-color: #536390;
+  --font-color: #424242;
+  --bg-color: #fff;
+  --secondary-bg-color: rgb(238, 237, 237);
+  --heading-color: #292922;
+  --box-shadow:  rgba(0, 0, 0, 0.15) 2px 4px 10px 2px;
+  --secondary-box-shadow: none;
+  --text-shadow: 0 0 15px rgb(169, 185, 240);
+  --password-color: #cc0000;
+}
+
+[data-theme="dark"] {
+  --primary-color: #9A97F3;
+  --secondary-color: #818cab;
+  --font-color: #e1e1ff;
+  --bg-color: #161625;
+  --secondary-bg-color:#26263f;
+  --heading-color: #818cab;
+  --box-shadow: 0 0 8px black;
+  --text-shadow: 0 1px 10px rgb(136, 86, 255);
+  --secondary-box-shadow: 0 0 15px rgba(81, 32, 216, 0.911);
+  --password-color: rgba(196, 180, 240, 0.911);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  
+}
+
+html,
+body,
+.wrapper {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: var(--bg-color);
+}
+
+
+
+.wrapper {
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  padding: .03%;
+  padding-top: 0px;
+  color: var(--font-color);
+  background-color: var(--bg-color);
+  box-shadow:  var(--box-shadow);
+}
+
+.header-title {
+  font-size: 15px;
+  text-shadow: var(--text-shadow);
+}
+
+/*Simple css to style it like a toggle switch*/
+.theme-switch-wrapper {
+  margin: auto 1%;
+  right: 10px; 
+  top: 24px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+}
+
+em {
+  margin-left: 10px;
+  font-size: 1rem;
+}
+
+
+.theme-switch {
+  display: inline-block;
+  height: 28px;
+  position: relative;
+  width: 52px;
+}
+
+.theme-switch input {
+  display:none;
+}
+
+.slider {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: -2px;
+  top: 0;
+  transition: .4s;
+}
+
+.slider:before {
+  background-color: #fff;
+  bottom: 3px;
+  content: "";
+  height: 22px;
+  left: 3px;
+  position: absolute;
+  transition: .4s;
+  width: 22px;
+}
+
+input:checked + .slider {
+  background-color: #66bb6a;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* Card elements */
+textarea {
+  font-size: 20pt;
+  height: auto;
+  color: var(--password-color);
+  background-color: var(--secondary-bg-color);
+  box-shadow: var(--secondary-box-shadow);
+}
+
+.card {
+  border-radius: 5px;
+  border-width: 1px;
+  text-align: center;
+  font-size: 18px;
+  margin: 5% auto;
+  max-width: 800px;
+  padding: 30px 40px;
+  color: var(--font-color);
+  background-color: var(--bg-color);
+  text-shadow: var(--text-shadow);
+  box-shadow: var(--box-shadow);
+}
+
+.card-header::after {
+  content: " ";
+  display: block;
+  position: relative;
+  width: 10%;
+  height: 2px;
+  background: var(--bg-color);
+}
+
+.card-body {
+  min-height: 100px;
+}
+
+.card-footer {
+  text-align: center;
+}
+
+.card-footer::before {
+  content: " ";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--bg-color);
+}
+
+.card-footer::after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+.btn {
+  border: none;
+  
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px 0px;
+  color: white;
+  display: inline-block;
+  font-size: 22px;
+  line-height: 22px;
+  margin: 16px 16px 16px 20px;
+  padding: 14px 34px;
+  text-align: center;
+  cursor: pointer;
+  background-color: var(--primary-color);
+}
+
+button[disabled] {
+  cursor: default;
+  background: #c0c7cf;
+}
+
+.float-right {
+  float: right;
+}
+
+#password {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  display: block;
+  width: 100%;
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 85px;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 2px dashed var(--secondary-color);
+  border-radius: 6px;
+  resize: none;
+  overflow: hidden;
+}
+
+@media (max-width: 690px) {
+  .btn {
+    font-size: 1rem;
+    margin: 16px 0px 0px 0px;
+    padding: 10px 15px;
+  }
+
+  #password {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .btn {
+    font-size: 0.8rem;
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1%;
+  font-size: 15px;
+  color: var(--font-color);
+}
+
