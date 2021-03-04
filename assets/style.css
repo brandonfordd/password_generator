@@ -70,14 +70,13 @@ header {
   text-shadow: var(--text-shadow);
 }
 
-/*Simple css to style it like a toggle switch*/
+/*Simple css to style checkbox like a toggle switch*/
 .theme-switch-wrapper {
-  margin: auto 1%;
-  right: 10px; 
-  top: 24px;
+  margin: 0 0 0 1%;
   display: flex;
+  justify-content: center;
   align-items: center;
-  position: absolute;
+  /* position: absolute; */
 }
 
 em {
@@ -120,7 +119,7 @@ em {
 }
 
 input:checked + .slider {
-  background-color: #66bb6a;
+  background-color: #5200d6;
 }
 
 input:checked + .slider:before {
