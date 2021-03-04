@@ -4,3 +4,4 @@ This is a password generator for a class assignment. The assignment asks that on
 link to website: https://brandonfordd.github.io/password_generator/
 
 screenshot of deployed site:
+![alt text](https://https://github.com/brandonfordd/password_generator/blob/main/images/password_gen.png?raw=true)
