@@ -46,11 +46,6 @@ body {
 
 
 
-.wrapper {
-  padding-top: 30px;
-  padding-left: 20px;
-  padding-right: 20px;
-}
 
 
 header {
@@ -135,12 +130,11 @@ input:checked + .slider:before {
 }
 
 /* Card elements */
-textarea {
-  font-size: 20pt;
-  height: auto;
-  color: var(--password-color);
-  background-color: var(--secondary-bg-color);
-  box-shadow: var(--secondary-box-shadow);
+
+.wrapper {
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .card {
@@ -188,9 +182,15 @@ textarea {
   clear: both;
 }
 
+textarea {
+  font-size: 20pt;
+  color: var(--password-color);
+  background-color: var(--secondary-bg-color);
+  box-shadow: var(--secondary-box-shadow);
+}
+
 .btn {
   border: none;
-  
   border-radius: 25px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px 0px;
   color: white;

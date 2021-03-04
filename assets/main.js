@@ -72,22 +72,35 @@ function generatePassword() {
 
 }
 
-
-// Get references to the #generate element
-let generateBtn = document.querySelector('#generate');
-
 // Write password to the #password input
 function writePassword() {
   let password = generatePassword();
   let passwordText = document.querySelector('#password');
-
   passwordText.value = password;
   return;
 }
 
+// Get references to the #generate element
+let generateBtn = document.querySelector('#generate');
+
 // Add event listener to generate button
 generateBtn.addEventListener('click', writePassword);
 
+//function to copy to clipboard
+function copyToClipboard() {
+  let passwordText = document.querySelector('#password')
+  let passwordVal = passwordText.value
+  passwordText.focus();
+  passwordText.select();
+  document.execCommand('copy')
+  alert('Your password has been copied!')
+}
+
+// Get reference to the copy button
+let clipboardBtn = document.querySelector('#clipboard')
+
+//Add event listener to copy to clipboard
+clipboardBtn.addEventListener('click', copyToClipboard);
 
 // function for dark mode button
 const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
