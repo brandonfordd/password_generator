@@ -47,4 +47,9 @@ THEN the password is either displayed in an alert or written to the page
 
 
 ## Screenshot
+
+1.
 ![alt text](https://github.com/brandonfordd/password_generator/blob/main/images/password_gen.png?raw=true)
+
+2.
+![alt text](https://github.com/brandonfordd/password_generator/blob/main/images/screenshot-2.png?raw=true)
